@@ -170,9 +170,21 @@ div.sologame {
 /*FOOTER STYLE*/
 #footer {
   font-size: 0.8em;
-  padding: 0.5em 5% 0.5em 5%;
+  padding: 2em 5% 2em 5%;
   background-color: #f6f6fa;
   margin: 0;
   border-radius: 10px;
   clear: both;
+}
+
+#footer .no-ai img {
+  width: 3.8em;
+}
+
+#footer .no-ai img:hover {
+  width: 4em;
+}
+
+#footer .no-ai a:hover {
+  background: none;
 }
