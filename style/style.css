@@ -1,0 +1,178 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+body {
+  background-color: #AE9F9B;
+  background-image: url('../images/background.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+	background-position: top;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  min-width: 370px;
+}
+
+hr {
+  border: 1px solid #111225;
+  /* margin: 0 4em; */
+}
+
+p {
+  line-height: 1.6em; /*I find the default HTML line-height tends to be a bit claustrophobic for main text*/
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.right {
+  float: right;
+  margin-left: 1em;
+}
+.left {
+  float: left;
+  margin-right: 1em;
+}
+.center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+  .small {
+    max-width: 60%;
+    height: auto;
+  }
+}
+.caption {
+  margin-top: 0;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+a:hover { 
+  background-color: #fff6e6;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #34436f;
+}
+
+/*#CONTAINER is the rectangle that contains everything but the background!*/
+#container {
+  margin: 3em auto;
+  width: 90%;
+	max-width: 1024px;
+}
+
+#content {
+  padding: 10px 5% 20px 5%;
+  margin: 1em 0;
+  border-radius: 10px;
+  background-color: #f6f6fa;
+  color: #151515; 
+}
+
+h2.inline, h3.inline, p.inline {
+  display: inline;
+}
+
+p.meta {
+  font-style: italic;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+p.mechanics {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+
+/*HEADER STYLE*/
+#header {
+  background-color: #111225;
+  padding: 1% 5%;
+  border-radius: 10px;
+  font-weight: bold;
+}
+#header h1 {
+  color: white;
+  font-size: 5em;
+}
+#header ul {
+  list-style-type: none;
+  padding: 0.5em 0;
+  margin: 0;
+}
+#header li {
+  font-size: 1.2em;
+  display: inline-block;
+  margin-right: 1.5em;
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
+}
+#header li a {
+  color: white;
+  text-decoration: none;
+  background-color: inherit;
+}
+#header li a:hover {
+  text-decoration: underline;
+}
+
+#headerimage {
+  float: right;
+  width: 30%;
+}
+
+/* #headerimage img {
+  width: 50%;
+} */
+
+/*POST LIST STYLE*/
+#postlistdiv ul {
+  font-size: 1.2em;
+  padding: 0;
+  list-style-type: none;
+}
+#recentpostlistdiv ul {
+  font-size: 1.2em;
+  padding: 0;
+  list-style-type: none;
+}
+.moreposts {
+  font-size: 0.8em;
+  margin-top: 0.2em;
+}
+
+/*SOLO GAME STYLES*/
+div.sologame {
+  margin: 2em 0;
+}
+
+/*NEXT AND PREVIOUS LINKS STYLE*/
+#nextprev {
+  text-align: center;
+  margin-top: 1.4em;
+}
+
+/*DISQUS STYLE*/
+#disqus_thread {
+  margin-top: 1.6em;
+}
+
+/*FOOTER STYLE*/
+#footer {
+  font-size: 0.8em;
+  padding: 0.5em 5% 0.5em 5%;
+  background-color: #f6f6fa;
+  margin: 0;
+  border-radius: 10px;
+  clear: both;
+}
