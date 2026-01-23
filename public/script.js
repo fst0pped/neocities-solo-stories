@@ -61,8 +61,7 @@ if ( url.includes("posts/") ) {
 }
 
 //Generate the Header HTML, a series of list items containing links.
-let headerHTML = '<div id="headerimage"><img src="/images/header.png" class="headerimage" /></div>' +
-'<h1>Solo Stories</h1>' +
+let headerHTML = '<h1>Solo Stories</h1>' +
 '<ul> <li><a href="' + relativePath + '/index.html">Home</a></li>' + 
 '<li><a href="' + relativePath + '/archive.html">Archive</a></li>' +
 '<li><a href="' + relativePath + '/solo_games.html">Solo Games</a></li>' +
