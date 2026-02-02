@@ -65,8 +65,8 @@ if ( url.includes("posts/") ) {
 //Generate the Header HTML, a series of list items containing links.
 let headerHTML = '<h1>Solo Stories</h1>' +
 '<ul> <li><a href="' + relativePath + '/index.html">Home</a></li>' + 
-'<li><a href="' + relativePath + '/archive.html">Archive</a></li>' +
 '<li><a href="' + relativePath + '/solo_games.html">Solo Games</a></li>' +
+'<li><a href="' + relativePath + '/archive.html">Archive</a></li>' +
 '<li><a href="' + relativePath + '/about.html">About</a></li> </ul>';
 
 //Generate the Footer HTML, which uses the variables defined in the BASIC INFO section above to list info about the site.
@@ -232,3 +232,20 @@ if (document.getElementById("footer")) {
 if (document.title === "Blog Post") {
   document.title = currentPostTitle;
 }
+
+// Create and insert game-specific post lists
+
+//Ironsworn
+let ironswornPostListHTML = "<ul>";
+for ( let i = 0; i < postsArray.length; i++ ) {
+  if ( formatPostLink(i).match(/Ironsworn/g) ) {
+    ironswornPostListHTML += formatPostLink(i);
+  }
+}
+ironswornPostListHTML += "</ul>";
+
+if (document.getElementById("ironswornpostlistdiv")) {
+  document.getElementById("ironswornpostlistdiv").innerHTML = ironswornPostListHTML;
+}
+
+console.log(ironswornPostListHTML)
