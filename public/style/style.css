@@ -156,6 +156,13 @@ div.sologame {
   margin: 2em 0;
 }
 
+@media only screen and (max-width: 524px) {
+  div.sologame p.right {
+    float: none;
+    text-align: center;
+  }
+}
+
 /*NEXT AND PREVIOUS LINKS STYLE*/
 #nextprev {
   text-align: center;

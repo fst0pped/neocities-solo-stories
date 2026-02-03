@@ -238,14 +238,12 @@ if (document.title === "Blog Post") {
 //Ironsworn
 let ironswornPostListHTML = "<ul>";
 for ( let i = 0; i < postsArray.length; i++ ) {
-  if ( formatPostLink(i).match(/Ironsworn/g) ) {
+  if ( formatPostLink(i).match(/Ironsworn-Mira/g) ) {
     ironswornPostListHTML += formatPostLink(i);
   }
 }
 ironswornPostListHTML += "</ul>";
 
-if (document.getElementById("ironswornpostlistdiv")) {
-  document.getElementById("ironswornpostlistdiv").innerHTML = ironswornPostListHTML;
+if (document.getElementById("ironswornmirapostlist")) {
+  document.getElementById("ironswornmirapostlist").innerHTML = ironswornPostListHTML;
 }
-
-console.log(ironswornPostListHTML)
