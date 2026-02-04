@@ -31,6 +31,7 @@ let authorLink = ""; // Enter your website, social media, etc. Some way for peop
   use a date it must still follow that format.*/
 
 let postsArray = [
+  [ "posts/2026-02-04-Bucket-of-Bolts-Endurance-1.html"],
   [ "posts/2026-01-31-Ironsworn-Mira-A-Call-to-Iron-4.html"],
   [ "posts/2026-01-24-Ironsworn-Mira-A-Call-to-Iron-3.html"],
   [ "posts/2026-01-21-Ironsworn-Mira-A-Call-to-Iron-2.html"],
@@ -234,6 +235,19 @@ if (document.title === "Blog Post") {
 }
 
 // Create and insert game-specific post lists
+
+//Bucket of Bolts 
+let BucketofBoltsPostListHTML = "<ul>";
+for ( let i = 0; i < postsArray.length; i++ ) {
+  if ( formatPostLink(i).match(/Bucket-of-Bolts-Endurance/g) ) {
+    BucketofBoltsPostListHTML += formatPostLink(i);
+  }
+}
+BucketofBoltsPostListHTML += "</ul>";
+
+if (document.getElementById("bucketofboltsendurancepostlist")) {
+  document.getElementById("bucketofboltsendurancepostlist").innerHTML = BucketofBoltsPostListHTML;
+}
 
 //Ironsworn
 let ironswornPostListHTML = "<ul>";
