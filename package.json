@@ -8,7 +8,7 @@
     },
       
     "scripts": {
-    "build": "npm run clean && run-p build:*"
+    "build": "npm run build:*"
     }
 }
 
