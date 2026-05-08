@@ -5,7 +5,11 @@
     <link rel="icon" href="../images/favicon.png" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8"> 
-    <link href="../style/style.css" rel="stylesheet" type="text/css" media="all">    
+    <link href="../style/style.css" rel="stylesheet" type="text/css" media="all">  
+	<link href="../style/mastodon-comments.css" rel="stylesheet" type="text/css" media="all">   
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.1/purify.min.js" integrity="sha512-uHOKtSfJWScGmyyFr2O2+efpDx2nhwHU2v7MVeptzZoiC7bdF6Ny/CmZhN2AwIK1oCFiVQQ5DA/L9FSzyPNu6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="module" src="../assets/mastodon-comments.js"></script>
   </head>
   <body>
     <div id="container">
@@ -176,8 +180,12 @@
 
 	<p>The overseer turns his smile on Mira. Tired and overworked, but genuine, he greets her. &quot;Well met young Ironsworn. My name is Torgan. And you may be the answer to a prayer.&quot;</p>
 
-
       <div id="nextprev"></div>
+
+	<div id="comments">
+		<mastodon-comments host="tabletop.social" user="fst0pped" tootId="116501704858572151"></mastodon-comments>
+	</div>
+
     </div> <!-- end of div id="content" -->
     <div id="footer"></div>
     </div> <!-- end of div id="container" -->
