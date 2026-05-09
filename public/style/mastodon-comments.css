@@ -1,0 +1,258 @@
+:root {
+  --font-color: #5d686f;
+  --font-size: 1.0rem;
+
+  --block-border-width: 1px;
+  --block-border-radius: 3px;
+  --block-border-color: #ededf0;
+  --block-background-color: #f7f8f8;
+  --dialog-background-color: #ffffff;
+  --muted-color: #5d686f;
+  --reply-color: #003eaa;
+  --reblog-color: #8c8dff;
+  --favourite-color: #ca8f04;
+  --button-color: #595aff;
+  --button-hover-color: #4849ff;
+
+  --comment-indent: 40px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-color: #d1d1d1;
+    --block-border-color: #3e3e3e;
+    --block-background-color: #1e1e1e;
+    --dialog-background-color: #2d2d2d;
+    --muted-color: #8a9ba3;
+    --reply-color: #7b9fff;
+    --reblog-color: #a8a9ff;
+    --favourite-color: #e6b44a;
+    --button-color: #6c6dff;
+    --button-hover-color: #595aff;
+  }
+}
+
+[data-theme="dark"] {
+  --font-color: #d1d1d1;
+  --block-border-color: #3e3e3e;
+  --block-background-color: #1e1e1e;
+  --dialog-background-color: #2d2d2d;
+  --muted-color: #8a9ba3;
+  --reply-color: #7b9fff;
+  --reblog-color: #a8a9ff;
+  --favourite-color: #e6b44a;
+  --button-color: #6c6dff;
+  --button-hover-color: #595aff;
+}
+
+#comments {
+    margin-top: 2em;
+    border-top: 1px #000 solid;
+    padding-top: 1em;
+}
+
+mastodon-comments {
+    
+  /* font-size: var(--font-size); */
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+#mastodon-stats {
+  text-align: center;
+  font-size: calc(var(--font-size) * 1.5);
+}
+
+#mastodon-title {
+  font-size: calc(var(--font-size) * 1.5);
+  font-weight: bold;
+}
+
+#mastodon-comments-list {
+  margin: 0 auto;
+  padding: 0;
+}
+
+#mastodon-comments-list ul {
+  padding-left: var(--comment-indent);
+}
+
+#mastodon-comments-list li {
+  list-style: none;
+}
+
+.mastodon-comment {
+  padding: 15px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #ece2e0
+}
+
+.mastodon-comment p {
+  margin-bottom: 0px;
+}
+
+.mastodon-comment .author {
+  padding-top:0;
+  display:flex;
+}
+
+.mastodon-comment .author a {
+  text-decoration: none;
+}
+
+.mastodon-comment .author .avatar img {
+  margin-right:1rem;
+  min-width:60px;
+  border-radius: 5px;
+}
+
+.mastodon-comment .author .details {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2em;
+}
+
+.mastodon-comment .author .details .name {
+  font-weight: bold;
+}
+
+.mastodon-comment .author .details .user {
+  color: var(--muted-color);
+  font-size: medium;
+}
+
+.mastodon-comment .author .date {
+  margin-left: auto;
+  font-size: small;
+}
+
+.mastodon-comment a.date {
+  color: #000;
+}
+
+.mastodon-comment .content {
+  margin: 15px 0;
+  line-height: 1.5em;
+}
+
+.mastodon-comment .author .details a,
+.mastodon-comment .content p {
+  margin-bottom: 10px;
+}
+
+.mastodon-comment .attachments {
+  margin: 0px 10px;
+}
+
+.mastodon-comment .attachments > * {
+  margin: 0px 10px;
+}
+
+.mastodon-comment .attachments img {
+  max-width: 100%;
+}
+
+.mastodon-comment .status > div, #mastodon-stats > div {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.mastodon-comment .status a, #mastodon-stats a {
+  color: var(--muted-color);
+  text-decoration: none;
+}
+
+.mastodon-comment .status .replies.active a, #mastodon-stats .replies.active a {
+  color: var(--reply-color);
+}
+
+.mastodon-comment .status .reblogs.active a, #mastodon-stats .reblogs.active a {
+  color: var(--reblog-color);
+}
+
+.mastodon-comment .status .favourites.active a, #mastodon-stats .favourites.active a {
+  color: var(--favourite-color);
+}
+
+@media only screen and (max-width: 640px) {
+  .mastodon-comment .author {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+
+  .mastodon-comment .author .date {
+    margin-left: 0;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+}
+
+dialog {
+  border: none;
+  border-radius: var(--block-border-radius);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  color: var(--font-color);
+  background-color: var(--dialog-background-color);
+}
+
+dialog::backdrop {
+  background: rgba(0,0,0,0.5);
+}
+
+dialog h3 {
+  margin-top: 0;
+}
+
+dialog #close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--font-color);
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.input-row input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid var(--block-border-color);
+  border-radius: var(--block-border-radius);
+  background-color: var(--block-background-color);
+  color: var(--font-color);
+}
+
+.button {
+  padding: 8px 16px;
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  border-radius: var(--block-border-radius);
+  cursor: pointer;
+}
+
+#add-comment {
+  display: block;
+  margin: 10px 0;
+}
+
+.button:hover {
+  background-color: var(--button-hover-color);
+}
