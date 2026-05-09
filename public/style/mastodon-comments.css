@@ -1,4 +1,4 @@
-/* :root {
+:root {
   --font-color: #5d686f;
   --font-size: 1.0rem;
 
@@ -15,9 +15,9 @@
   --button-hover-color: #4849ff;
 
   --comment-indent: 40px;
-} */
+}
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --font-color: #d1d1d1;
     --block-border-color: #3e3e3e;
@@ -30,9 +30,9 @@
     --button-color: #6c6dff;
     --button-hover-color: #595aff;
   }
-} */
+}
 
-/* [data-theme="dark"] {
+[data-theme="dark"] {
   --font-color: #d1d1d1;
   --block-border-color: #3e3e3e;
   --block-background-color: #1e1e1e;
@@ -43,7 +43,7 @@
   --favourite-color: #e6b44a;
   --button-color: #6c6dff;
   --button-hover-color: #595aff;
-} */
+}
 
 #comments {
     margin-top: 2em;
@@ -84,14 +84,11 @@ p {
 }
 
 .mastodon-comment {
-  /* background-color: var(--block-background-color);
-  border-radius: var(--block-border-radius);
-  border: var(--block-border-width) var(--block-border-color) solid; */
   padding: 15px;
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
-  color: var(--font-color);
+  background-color: #ece2e0
 }
 
 .mastodon-comment p {
@@ -131,6 +128,10 @@ p {
 .mastodon-comment .author .date {
   margin-left: auto;
   font-size: small;
+}
+
+.mastodon-comment a.date {
+  color: #000;
 }
 
 .mastodon-comment .content {
