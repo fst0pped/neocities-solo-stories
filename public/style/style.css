@@ -93,6 +93,10 @@ p.mechanics {
   margin-right: 2em;
 }
 
+p#note {
+  padding: 2em;
+  background-color: lightpink;
+}
 
 /*HEADER STYLE*/
 #header {
